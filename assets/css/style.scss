@@ -1,0 +1,146 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+
+strong {
+  font-weight: bold;
+  color: black;
+}
+
+.page-name, .project-tagline, .level {
+  color: white;
+}
+.page-header {
+  background-image:none;
+  background-color: #ff6000;  
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+
+.project-name {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}
+
+.project-tagline  {
+  margin: 0px;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.level {
+  margin-top: 0px;
+}
+
+.main-content{
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 16pt;
+  margin-bottom: 120px;
+}
+
+.main-content h1{
+  color:#ff6000;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}
+
+.main-content h2{
+  color:#ff6000;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}
+
+.main-content h3{
+  color:#ff6000;
+  text-align: left;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}
+
+.main-content h4{
+  color:#ff6000;
+  text-align: left;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: bold;
+}
+.page-footer{
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  bottom: 0px;
+  align-items: center;
+  
+}
+
+.site-footer{
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  background-color: #dedede;
+  bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dsl-logo{
+  text-align: right;
+  float: left;
+  width: 33%;
+  height: 120px;
+}
+
+.righttwocolumns{ 
+  width: 67%;
+  height: 120px;
+  float: right;
+}
+
+.footercredits{
+  text-align: center;
+  width: 50%;
+  height: 120px;
+  float: left;
+  vertical-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: lighter;
+}
+
+
+.libraries-logo{
+  text-align: left;
+  width: 50%;
+  height: 120px;
+  float: right;
+  padding-left: 10px;
+}
+
+
+a{
+  color: darken(#ff6000, 0);
+  font-weight: bold;
+}
+
+a:hover{
+  color: darken(#ff6000, 10);
+ }
+
+.main-content img{
+  display:block;
+  margin-top: 10px!important;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #cccccc;
+  padding: 3px;
+  box-shadow:2px 2px 3px #888888;
+}
+
+.level {
+  font-size: 1.15rem;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color: #dedede;
+  font-weight: bold;
+}
