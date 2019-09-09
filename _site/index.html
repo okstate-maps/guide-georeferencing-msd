@@ -5,14 +5,14 @@
     <title>About</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
-    <link rel="stylesheet" href="/assets/css/style.css?v=">
+    <link rel="stylesheet" href="/assets/css/style.css?v=405f801ffeec7d92b07eddaf7a74cb08a130413b">
    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Title</h1>
-      <h2 class="project-tagline">Tagline</h2>
-      <h2 class="level">Lesson Level: Beginner/Intermediate/Advanced</h2>
+      <h1 class="project-name">Georeferencing Guide for OSU Maps and Spatial Data Employees</h1>
+      <h2 class="project-tagline">We love georeferencing, don't we folks?</h2>
+      <h2 class="level">Lesson Level: Intermediate</h2>
       
     </section>
 
@@ -21,21 +21,85 @@
       <br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
       <br>
       <h2 id="about">About</h2>
-<p>Last Updated <em>[add date here]</em> <br />
+<p>Last Updated <em>09/06/2019</em> <br />
 Created by <a href="https://info.library.okstate.edu/map-room">OSU Maps and Spatial Data</a></p>
+
+<p><img src="/images/OSULogo.png" alt="img example" /></p>
 
 <h2 id="table-of-contents">Table of Contents</h2>
 <ul>
   <li>Introduction</li>
-  <li><em>[delicious content]</em></li>
+  <li>Selecting a map</li>
   <li>
     <ul>
-      <li>sub delicious content</li>
+      <li>Has this map already been georeferenced?</li>
     </ul>
   </li>
   <li>
     <ul>
-      <li>more sub delicious</li>
+      <li>Locating the File</li>
+    </ul>
+  </li>
+  <li>Georeferencing with ArcGIS Pro</li>
+  <li>
+    <ul>
+      <li>Starting a New Project</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>Adding Files</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>Georeferencing</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>
+        <ul>
+          <li>Adding Latitude and Longitude</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>
+        <ul>
+          <li>Adding Control Points</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>
+        <ul>
+          <li>Transforming the Image</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>
+        <ul>
+          <li>Deleting Control Points</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>Saving the Project</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>Ensuring Proper File Location</li>
     </ul>
   </li>
   <li>Conclusion</li>
@@ -43,14 +107,278 @@ Created by <a href="https://info.library.okstate.edu/map-room">OSU Maps and Spat
 </ul>
 
 <h2 id="introduction">Introduction</h2>
+<p>Georeferencing is the process of adding geographic information to a raster image (i.e. maps, satelite images and aerial photographs) so mapping software can place the image in its real world location. This is done by assigning geographic coordinates to the raster’s pixels.</p>
 
-<h2 id="delicious-content"><em>[delicious content]</em></h2>
+<h2 id="selecting-a-map">Selecting a map</h2>
+<ol>
+  <li>Go to the <a href="https://docs.google.com/spreadsheets/d/11AVFGlfQdQSNu6PRN98cSw4xKW1NvMasxrXGEZOBSko/edit#gid=372455437">Georeferencing Tracking</a> spreadsheet.</li>
+  <li>Pick a project to work on, then click on its respective sheet.</li>
+  <li>Select a map from the sheet that isn’t marked as done. Take note of the file name.</li>
+</ol>
 
-<h4 id="sub-delicious-content">Sub Delicious Content</h4>
+<h3 id="locating-the-file">Locating the File</h3>
+<ol>
+  <li>
+    <p>To locate the map file, follow the <a href="https://docs.google.com/spreadsheets/d/11AVFGlfQdQSNu6PRN98cSw4xKW1NvMasxrXGEZOBSko/edit#gid=372455437">instructions</a> for your chosen project.</p>
+  </li>
+  <li>
+    <p>Select the folder that contains the file name of the map you chose and locate the corresponding TIF File. See the example below for the McCasland Collection.</p>
 
-<h4 id="more-sub-delicious">More Sub Delicious</h4>
+    <p><img src="/images/FolderMaze.PNG" alt="Folder Maze" /></p>
+  </li>
+  <li>
+    <p>Open the file in <em>Adobe Photoshop</em>. Click <strong>File, Save As</strong>.</p>
+
+    <p><img src="/images/SaveAsJPG.PNG" alt="Save as JPEG" /></p>
+  </li>
+  <li>
+    <p>Make sure to name this new file exactly as the TIF is named and change the <em>Save as Type</em> to <strong>JPEG</strong>. Then click <strong>Save</strong>.</p>
+
+    <p><img src="/images/SaveAsType.PNG" alt="Save as Type" /></p>
+  </li>
+  <li>
+    <p>A pop up should appear. Do not change any of the settings unless instructed to do so. Click <strong>OK</strong> and exit <em>Photoshop</em>.</p>
+  </li>
+</ol>
+
+<p><img src="/images/JPEGOptions.PNG" alt="JPEG Options" /></p>
+
+<h2 id="georeferencing-with-arcgis-pro"><em>Georeferencing with ArcGIS Pro</em></h2>
+<h3 id="creating-a-new-project">Creating a New Project</h3>
+<ol>
+  <li>To begin a new project, open ArcGIS Pro.</li>
+  <li>
+    <p>Click <strong>Map</strong> under <em>New, Blank Templates</em>.</p>
+
+    <p><img src="/images/NewProject.PNG" alt="New Project" /></p>
+  </li>
+  <li>Navigate If you don’t have one already Name the project and choose a file location that will be easy to access. Then click <strong>OK</strong>. A world map screen should open.</li>
+</ol>
+
+<h3 id="adding-files">Adding Files</h3>
+<p>Now that a new project has been created, a folder connection must be added to import data.</p>
+<ol>
+  <li>
+    <p>To do this, click <strong>Add Folder</strong> under the <em>Insert</em> tab of the toolbar to create a folder connection.</p>
+
+    <p><img src="/images/FolderConnection.PNG" alt="Folder Connection" /></p>
+  </li>
+  <li>Select the desired folder and click <strong>OK</strong>.</li>
+  <li>
+    <p>The folder connection should appear under <em>Folders</em> in the <em>Catalog</em> pane.</p>
+
+    <p><img src="/images/CatalogConnection.PNG" alt="Catalog Connection" /></p>
+  </li>
+  <li>
+    <p>Locate desired data. Right click the file and click <strong>Add to Current Map</strong>. The selected file is now added to the project and should appear in the <em>Contents</em> pane. It is okay if the raster is not displayed on the map as long as the file is visible in the Contents pane.</p>
+
+    <p><img src="/images/AddedFile.PNG" alt="Added File" /></p>
+  </li>
+</ol>
+
+<p><em>Note: For georeferencing in ArcGIS Pro, JPGs are the preferred file type.</em></p>
+
+<h3 id="georeferencing">Georeferencing</h3>
+<p>Once a file has been added to the project, the georeferencing process can begin.</p>
+<ol>
+  <li>In order to start georeferencing, the desired file must be selected in the contents pane.</li>
+  <li>
+    <p>Click the <strong>Imagery</strong> tab, then under it, click <strong>Georeference</strong>. A new <em>Georeference</em> tab will appear on the toolbar.</p>
+
+    <p><img src="/images/Georeference.PNG" alt="Georeference" /></p>
+  </li>
+  <li>Click <strong>Fit to Display</strong> under the <em>Georeference</em> tab. If the raster image was not visible before, it should now appear on the map. The size of the image can be adjusted by zooming in or out and clicking <strong>Fit to Display</strong> as needed, or by using the <strong>Move</strong>, <strong>Scale</strong> or <strong>Rotate</strong> tools. The image does not need to be the exact size of the geographic area it covers. This will be corrected during the georeferencing process.</li>
+</ol>
+
+<p><img src="/images/FittoDisplay.PNG" alt="Fit to Display" /></p>
+
+<h4 id="helpful-layers">Helpful Layers</h4>
+<p>Depending on what you are georeferencing, there may be one or more useful layers to add to your map to aid the process.</p>
+
+<h5 id="latitude-and-longitude-graticule">Latitude and Longitude (graticule)</h5>
+<p>If your map has latitude/longitude lines on it, you can use them to take a georeferencing shortcut.</p>
+
+<p><img src="/images/latlong.jpg" alt="Latitude/Longitude Lines on a map" /></p>
+
+<ol>
+  <li>Click on the Map tab, then click Add Data. Navigate to <code class="highlighter-rouge">C:\Georeferencing\Georeferencing_Helpers\graticule</code>.</li>
+  <li>Select the file called <code class="highlighter-rouge">graticule.lyrx</code>, then click OK.</li>
+  <li>You should see a layer appear that looks like this.
+ <img src="/images/latlong2.jpg" alt="Lat/Long Layer" /></li>
+  <li>It may not look very helpful at the moment, but if you zoom in, you will see that each line is clearly labeled, particularly those divisible by five.</li>
+  <li>When identifying and adding control points (see below), use the intersections of latitude longitude lines.</li>
+</ol>
+
+<h5 id="township-and-range">Township and Range</h5>
+<p>Some maps, especially but not limited to the WPA collection, contain detailed information from the Public Land Survey. This information can be used for georeferencing as well.</p>
+
+<p><img src="/images/plss1.jpg" alt="WPA map with PLS information" /></p>
+
+<ol>
+  <li>Click on the Map tab, then click Add Data. Navigate to <code class="highlighter-rouge">C:\Georeferencing\Georeferencing_Helpers\</code>.</li>
+  <li>Select the file called <code class="highlighter-rouge">ok_township_range.lyrx</code>, then click OK.</li>
+  <li>You should see a layer appear that looks like this.
+ <img src="/images/plss2.JPG" alt="PLS township/range layer" /></li>
+  <li>If you need sections, you can add the layer <code class="highlighter-rouge">sections.lyrx</code> from the same location. It will increase load time, however, so only add sections if you can make use of them.
+ <img src="/images/plss3.JPG" alt="PLS township/range layer with sections layer" /></li>
+</ol>
+
+<h5 id="aerial-imagery">Aerial imagery</h5>
+<p>When georeferencing aerial photos, you can make use of two layers. One is relatively current imagery that’s better positioned than the Satellite basemap on ArcGIS. The other is a layer of historical 1:24k topographic maps from the USGS. These will be very helpful when dealing with older, more remote aerials.</p>
+
+<ol>
+  <li>Click on the Map tab, then click Add Data. Navigate to <code class="highlighter-rouge">C:\Georeferencing\Georeferencing_Helpers\</code>.</li>
+  <li>Select the file called <code class="highlighter-rouge">AerialReference.lyrx</code>, then click OK.</li>
+  <li>Repeat 1-2, with <code class="highlighter-rouge">USA_Historical_Topo_Maps.lyrx</code>.</li>
+</ol>
+
+<h5 id="oklahoma-county-boundaries">Oklahoma County boundaries</h5>
+<p>Sometimes, you just need some county boundaries!</p>
+
+<ol>
+  <li>Click on the Map tab, then click Add Data. Navigate to <code class="highlighter-rouge">C:\Georeferencing\Georeferencing_Helpers\</code>.</li>
+  <li>Select the file called <code class="highlighter-rouge">okla_counties.lyrx</code>, then click OK.</li>
+</ol>
+
+<h4 id="adding-control-points">Adding Control Points</h4>
+<p>Now that you’ve got your helper layers in place, it’s time to add control points. Control points are used to align pixels on the raster image with real life coordinates.</p>
+
+<ol>
+  <li>
+    <p>To add control points, click <strong>Add Control Points</strong> in the <strong>Adjust</strong> column of the <strong>Georeference</strong> tab.</p>
+
+    <p><img src="/images/AddControlPoints.PNG" alt="Add Control Points" /></p>
+  </li>
+</ol>
+
+<h5 id="for-maps-with-latitude-longitude-or-townshiprangesections">For maps with latitude longitude or township/range/sections</h5>
+<ol>
+  <li>
+    <p>Locate and select the point of intersecting lines on the raster image (for latitude/longitude, township/range). A red box should appear, indicating the selection on the map.</p>
+
+    <p><img src="/images/InitialSelection.PNG" alt="Initial Selection" /></p>
+  </li>
+  <li>Turn off the raster layer by clicking the check box next to its name in the <em>Contents</em> pane.</li>
+  <li>
+    <p>Find and select the corresponding intersection on the original world map. Be as precise as possible to ensure minimal error. Once this is done, a control point is added.</p>
+
+    <p><img src="/images/ControlPoint.PNG" alt="Control Point" /></p>
+  </li>
+</ol>
+
+<h5 id="for-aerial-photos-or-maps-without-grids">For aerial photos or maps without grids</h5>
+<ol>
+  <li>
+    <p>Use the historical topo layer, aerial layer, county boundaries, etc to identify the location of the map/aerial being georeferenced. Some good spots to use as control points include:</p>
+
+    <ul>
+      <li>The corner of a building where it is closest to the ground.
+   <img src="/images/ctrlpt1.JPG" alt="Building corner point" /></li>
+      <li>Section road intersection (combined with the sections layer mentioned above)
+   <img src="/images/ctrlpt3.JPG" alt="Section roads" /></li>
+      <li>Distinctive pavement (like cul-de-sacs)
+   <img src="/images/ctrlpt2.JPG" alt="Cul-de-sac" /></li>
+    </ul>
+
+    <p>Some spots that you should <strong>NOT</strong> rely on, as they change too rapidly:</p>
+    <ul>
+      <li>Vegetation</li>
+      <li>Any kind of water, especially rivers/creeks!</li>
+    </ul>
+  </li>
+  <li>Locate and click the point on the raster image being georeferenced. A red box should appear, indicating the selection on the map.</li>
+  <li>Turn off the raster layer by clicking the check box next to its name in the <em>Contents</em> pane.</li>
+  <li>Find and select the corresponding intersection on the original world map. Be as precise as possible to ensure minimal error. Once this is done, a control point is added.</li>
+</ol>
+
+<p><strong>Important</strong></p>
+
+<p><em>An <strong>absolute</strong> minimum of four control points should be placed. <strong>Spline</strong> is the preferred transformation for accuracy and requires 10 or more control points, but there are other transformations when this number of control points is not possible. The more control points that are added, the more precise the transformation will be. Also, it is best to have the control points evenly distributed throughout the map to reduce the chances of transformation error.</em></p>
+
+<h4 id="transforming-the-image">Transforming the Image</h4>
+<p>Transforming the image allows the raster image to be manipulated so the control points are aligned.</p>
+<ol>
+  <li>
+    <p>To transform the image, ensure that all necessary control points have been placed.</p>
+
+    <p><em>Note: You can add more control points even after the image has been transformed.</em></p>
+  </li>
+  <li>
+    <p>Click the <strong>Transformation</strong> icon in the <strong>Adjust</strong> section of the <strong>Georeference</strong> tab. Then select the desired transformation.</p>
+
+    <p><img src="/images/Transformation.PNG" alt="Transformation" /></p>
+
+    <p><em>Note: <strong>Spline</strong> is preferred because it renders the most accurate transformations.</em></p>
+  </li>
+  <li>
+    <p>The image is now transformed and can be saved or edited if desired.</p>
+  </li>
+</ol>
+
+<h4 id="deleting-control-points">Deleting Control Points</h4>
+<p>Do not fret if a control point is misplaced or results in a skewed image. They are easy to delete!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>![Bad Control Point](/images/BadControlPoint.PNG)
+</code></pre></div></div>
+
+<ol>
+  <li>
+    <p>To delete a control point, click <strong>Control Point Table</strong> in the <strong>Review</strong> section of the <strong>Georeference</strong> tab.</p>
+
+    <p><img src="/images/ControlPointTable.PNG" alt="Control Point Table" /></p>
+  </li>
+  <li>
+    <p>A table will open at the bottom of the screen. This table shows all of the control point data. If the incorrect control point is unknown, click the checkbox next to a point to uncheck it. If the image becomes unskewed, this is the faulty control point.</p>
+
+    <p><img src="/images/CPTable.PNG" alt="CP Table" /></p>
+  </li>
+  <li>
+    <p>To delete a control point, click <strong>Delete</strong> in the <em>Review</em> section of the <em>Georeference</em> tab.</p>
+
+    <p><img src="/images/DeleteControlPoint.PNG" alt="Delete" /></p>
+  </li>
+</ol>
+
+<h4 id="saving-the-project">Saving the Project</h4>
+<p>When finished with the project, it is important to ensure that it is saved properly. Clicking the <strong>Save</strong> icon in the top left corner of the screen will not save the georeferenced data.</p>
+<ol>
+  <li>
+    <p>Click <strong>Save</strong> in the <em>Save</em> section of the <em>Georeference</em> tab. This will update the existing raster file that was imported into the project.</p>
+
+    <p><img src="/images/Save.PNG" alt="Save" /></p>
+  </li>
+  <li>
+    <p>Click <strong>Export Control Points</strong> in the <em>Save</em> section of the <em>Georeference</em> tab. This will create a text file that contains the control point data.</p>
+
+    <p><img src="/images/ExportControlPoints.PNG" alt="Export Control Point" /></p>
+  </li>
+  <li>
+    <p>Name the file the same as the JPG and the TIF files and save it in the same folder where the TIF is located. After all of this is done, it is important that the project is closed correctly.</p>
+  </li>
+  <li>
+    <p>Click <strong>Close Georeference</strong> under the <em>Georeference</em> tab of the toolbar.</p>
+
+    <p><img src="/images/Close.PNG" alt="Close" /></p>
+  </li>
+</ol>
+
+<p>The project can be closed and ArcGIS Pro can be exited.</p>
+
+<h4 id="ensuring-proper-file-locations">Ensuring Proper File Locations</h4>
+<p>Once a map has been georeferenced, some of the files must be moved to the folder containing the completed map information.</p>
+<ol>
+  <li>Locate the files for the map that was georeferenced (should be in <code class="highlighter-rouge">C:\Georeferencing\&lt;your georeferencing folder&gt;</code>).</li>
+  <li>
+    <p>Select the <em>JGWX</em> and <em>JPG</em> files as well as the <em>XML</em> document by holding <em>Ctrl</em> on the keypad and clicking on all three files. They should be highlighted after they are clicked. Leave the TIF file.</p>
+
+    <p><img src="/images/SelectedFiles.PNG" alt="Selected Files" /></p>
+  </li>
+  <li>Right click in the highlighted area and click <strong>Cut</strong>.</li>
+  <li>Open the <strong>Georeferencing</strong> folder for your project on the <strong>Digitization (T:) drive</strong>. Right click within the folder and select <strong>Paste</strong>. The three selected files should appear in this folder.</li>
+</ol>
 
 <h2 id="conclusion">Conclusion</h2>
+<p>Georeferencing is a very usefull skill and is made simple by ArcGIS Pro. It only takes a little practice and time to transform a raster image by adding geographic information to its pixels.</p>
 
 <h2 id="further-readingresources">Further Reading/Resources</h2>
 
