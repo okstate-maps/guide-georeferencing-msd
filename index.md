@@ -79,7 +79,7 @@ Once a file has been added to the project, the georeferencing process can begin.
 
 3. Click **Fit to Display** under the *Georeference* tab. If the raster image was not visible before, it should now appear on the map. The size of the image can be adjusted by zooming in or out and clicking **Fit to Display** as needed, or by using the **Move**, **Scale** or **Rotate** tools. The image does not need to be the exact size of the geographic area it covers. This will be corrected during the georeferencing process.
 
-![Fit to Display](images/FittoDisplay.PNG)
+    ![Fit to Display](images/FittoDisplay.PNG)
 
 
 #### Helpful Layers
@@ -114,7 +114,9 @@ When georeferencing aerial photos, you can make use of two layers. One is relati
 
 1. Click on the Map tab, then click Add Data. Navigate to `C:\Georeferencing\Georeferencing_Helpers\`.
 2. Select the file called `AerialReference.lyrx`, then click OK. 
-3. Repeat 1-2, with `USA_Historical_Topo_Maps.lyrx`.
+3. You will see the layer appear in the table of contents (left hand side of the application). Click and drag it so that it is below the map/photo you are going to georeference. The order layers appear in the TOC determines how they are drawn on the map, and if the aerial/topo layer is on top, they will cover up your georeferencing object.
+4. Repeat 1-3, with `USA_Historical_Topo_Maps.lyrx`.
+
 
 ##### Oklahoma County boundaries
 Sometimes, you just need some county boundaries!
