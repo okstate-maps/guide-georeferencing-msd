@@ -50,16 +50,11 @@ Georeferencing is the process of adding geographic information to a raster image
 ![JPEG Options](images/JPEGOptions.PNG)
 
 ## *Georeferencing with ArcGIS Pro*
-### Creating a New Project
-1. To begin a new project, open ArcGIS Pro.
-2. Click **Map** under *New, Blank Templates*.
-    
-    ![New Project](images/NewProject.PNG)
-
-3. Navigate If you don't have one already Name the project and choose a file location that will be easy to access. Then click **OK**. A world map screen should open.
+### Opening a Project
+1. You should have a project located in `C:\Georeferencing\<your name>`. If you don't have one, follow the instructions on [this document](https://docs.google.com/document/d/19ubGO7a80yxE5rCVoB51gI4nfhuKZYfkguyhjwWWzCE/edit#) to create one.
 
 ### Adding Files
-Now that a new project has been created, a folder connection must be added to import data. 
+With your project created/opened, a folder connection must be added to import data. 
 1. To do this, click **Add Folder** under the *Insert* tab of the toolbar to create a folder connection.
 
     ![Folder Connection](images/FolderConnection.PNG)
